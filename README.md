@@ -1,2 +1,2 @@
-# test-pages
-Test for hosting pages
+# currencyConverter
+A progressive web app for currency conversion 
