@@ -1,5 +1,5 @@
 const apiKey = '73996550bbd24dca800016be1175f6a2';
-const main = document.queryselector('main');
+const main = document.querySelector('main');
 window.addEventListener('load', e => {
 	updateNews();
 });
