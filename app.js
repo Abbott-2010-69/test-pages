@@ -1,11 +1,11 @@
 const apiKey = '73996550bbd24dca800016be1175f6a2';
 const main = document.queryselector('main');
-window.addEventListener('load', e ==> {
+window.addEventListener('load', e => {
 	updateNews();
 });
 
 async function updateNews(){
-	
+	console.log('entered update');
 	const result = await fetch(`https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=${apiKey}`);
 	const json = await result.json();
 	
