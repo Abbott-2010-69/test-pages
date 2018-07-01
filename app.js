@@ -4,12 +4,24 @@ window.addEventListener('load', e => {
 	updateNews();
 });
 
+if ('serviceWorker' in navigator){
+	try{
+		navigator.serviceWorker.register('/sw.js');
+		console.log('SW registered')
+	}
+	catch{
+		console.log('SW register failed')
+	}
+}
+
 async function updateNews(){
 	console.log('entered update');
-	const result = await fetch(`https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=${apiKey}`);
+	const result = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}`);
 	const json = await result.json();
 	
+	
 	main.innerHTML = json.articles.map(createArticle).join('\n');
+	
 	
 	
 }

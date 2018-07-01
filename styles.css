@@ -37,3 +37,12 @@ main {
 .article img {
   width: 100%;
 }
+
+.postfix{
+	display:flex;
+	margin: 10px;
+}
+
+#splitter{
+	display:flex;
+}
